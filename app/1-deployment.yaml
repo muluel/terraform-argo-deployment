@@ -3,7 +3,11 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: myapp
+  namespace: prod
+  labels:
+    app: myapp
 spec:
+  replicas: 1
   selector:
     matchLabels:
       app: myapp
